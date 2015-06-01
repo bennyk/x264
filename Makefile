@@ -269,6 +269,8 @@ clean:
 distclean: clean
 	rm -f config.mak x264_config.h config.h config.log x264.pc x264.def conftest*
 
+install: install-lib-dev install-cli install-lib-static install-lib-shared
+
 install-cli: cli
 	$(INSTALL) -d $(DESTDIR)$(bindir)
 	$(INSTALL) x264$(EXE) $(DESTDIR)$(bindir)
